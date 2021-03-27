@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fast food lokao"
+        android:id="@+id/tv_titulo"
+       />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_fritas"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo"
+        android:layout_marginTop="20dp"
+        android:text="Porçao de fritas (R$7,00)"
+        android:onClick="comprar"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_coca"
+        app:layout_constraintTop_toBottomOf="@+id/bt_fritas"
+        android:layout_marginTop="20dp"
+        android:text=" coca (R$5,00)"
+        android:onClick="comprar"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_casquinha"
+        app:layout_constraintTop_toBottomOf="@+id/bt_coca"
+        android:layout_marginTop="20dp"
+        android:text="Casquinha (R$2.50)"
+        android:onClick="comprar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total compra: -"
+        android:id="@+id/tv_total"
+        app:layout_constraintTop_toBottomOf="@+id/bt_casquinha"
+        android:layout_marginTop="30dp"
+
+/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compra finalizada"
+        android:id="@+id/sw_finalizada"
+        app:layout_constraintTop_toBottomOf="@id/tv_total"
+        android:checked="false"
+        android:onClick="comprar"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

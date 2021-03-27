@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linha topo!"
+        android:textSize="35sp"
+        android:id="@+id/tv_topo"
+     />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linha meio!"
+        android:textSize="35sp"
+        android:id="@+id/tv_meio"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_topo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linha Baixo!"
+        android:id="@+id/tv_baixo"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_meio"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invisivel com invisible"
+        app:layout_constraintTop_toBottomOf="@id/tv_baixo"
+        android:id="@+id/bt_invisivel"
+        android:onClick="invisivel1"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invisivel com gone"
+        app:layout_constraintTop_toBottomOf="@id/bt_invisivel"
+        android:id="@+id/bt_gone"
+        android:onClick="invisivel2"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
