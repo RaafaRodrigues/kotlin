@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meu app de boletin"
+        android:id="@+id/tv_topo"
+        android:textColor="#8822AA"
+        android:textSize="30sp"
+
+ />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_nome"
+        android:hint="Nome do(a) aluno(a)"
+        app:layout_constraintTop_toBottomOf="@+id/tv_topo"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_nota1"
+        android:inputType="text"
+        android:hint="Primeira Nota"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nome"
+
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ed_nota2"
+        android:inputType="numberDecimal"
+        android:hint="Segunda Nota"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nota1"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+       android:text="Validar"
+        android:id="@+id/bt_validar"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nota2"
+        android:onClick="validar"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avaliar"
+        android:id="@+id/bt_avaliar"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nota2"
+        app:layout_constraintLeft_toRightOf="@+id/bt_validar"
+       android:layout_marginLeft="5dp"
+        android:onClick="avaliar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_resultado"
+        app:layout_constraintTop_toBottomOf="@+id/bt_validar"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+/>
+</androidx.constraintlayout.widget.ConstraintLayout>
